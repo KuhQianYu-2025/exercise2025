@@ -1,0 +1,29 @@
+package w5e03;
+
+import java.util.Scanner;
+
+public class W5E03 {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        String yes = "yes";
+        String no = "no";
+        String ans;
+        boolean yesOrNo = true;
+        
+        while (yesOrNo) {
+            System.out.println("Do you want to continue? (yes/no): ");
+            ans = keyboard.nextLine();
+            if (ans.equalsIgnoreCase(no)) {
+                System.out.println("Program end.");
+                yesOrNo = false;
+            }
+            if (ans.equalsIgnoreCase(yes)) {
+                System.out.println("Program continue");
+                yesOrNo = false;
+            }
+        }
+        
+    }
+    
+}
