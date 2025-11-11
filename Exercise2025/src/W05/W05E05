@@ -1,0 +1,39 @@
+package w05e05;
+
+import java.util.Scanner;
+
+public class W05E05 {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        int even = 0;
+        int evenSum = 0;
+        int odd = 0;
+        int oddSum = 0;
+        int number;
+        
+        System.out.print("How many numbers will you enter?: ");
+        int numCount = keyboard.nextInt();
+        
+        for (int i=1;i<=numCount;i++) {
+            System.out.print("Enter your number: ");
+            number = keyboard.nextInt();
+            if (number%2==0) {
+                even++;
+                evenSum += number;
+            }
+            else {
+                odd++;
+                oddSum+=number;
+            }
+        }
+        
+        System.out.println("Total even numbers: "+even);
+        System.out.println("Total sum of even numbers: "+evenSum);
+        System.out.println("Total odd numbers: "+ odd);
+        System.out.println("Total sum of odd numbers: "+oddSum);
+
+        keyboard.close();
+    }
+    
+}
